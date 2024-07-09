@@ -1,3 +1,4 @@
+/* Estilo geral */
 *{
     margin: 0;
     padding: 0;
@@ -122,6 +123,8 @@ body{
     margin: 0 auto;
 }
 
+/* estilo de cabeçalho */
+
 header{
     padding: 40px 4%; 
 }
@@ -166,3 +169,4 @@ header .btn-contato button{
 header .btn-contato button:hover{
     box-shadow: 0px 0px 8px #ff00bf;
 }
+
