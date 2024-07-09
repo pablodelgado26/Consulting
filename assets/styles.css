@@ -14,3 +14,10 @@ body{
     max-width: 1280px;
     margin: 0 auto;
 }
+
+/* Estilo cabeçalho */
+
+header{
+    padding: 40px 4%;
+    
+}
