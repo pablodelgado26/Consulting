@@ -257,11 +257,6 @@ section.especialidades .flex{
     box-shadow: 0 0 8px #ff00bf;
 }
 
-.especialidades .especialidades-box i{
-    font-size: 70px;
-    color: #ff00bf;
-}
-
 .especialidades .especialidades-box h3{
     font-size: 28px;
     margin: 15px 0;
