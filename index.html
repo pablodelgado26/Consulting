@@ -100,10 +100,10 @@
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">Fala <span>Comigo.</span></h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu email:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
+                <form action="envia.php" method="post">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="text" name="email" id="email" placeholder="Seu email:" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="Seu celular:">
                     <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
                     <div class="btn-enviar"><input type="submit" value="Enviar"></div>
                 </form>

@@ -183,7 +183,7 @@ header nav ul li{
 
 
 
-.btn-contato button:hover{
+.btn-contato button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #ff00bf;
     transform: scale(1.05);
 }
@@ -289,7 +289,8 @@ form{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  margin-top: 40px;
 }
 
 form input{
@@ -298,4 +299,35 @@ form input{
   border: 0;
   outline: 0;
   padding: 20px 15px;
+  border-radius: 15px;
+  color: #000;
+  font-size: 12px;
+}
+
+form textarea{
+  resize: none;
+  width: 100%;
+  background-color: #d3d1d1b9;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #000;
+  font-size: 12px;
+  max-width: 1000px;
+  max-height: 1000px;
+}
+
+form .btn-enviar{
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input{
+  width: 120px;
+  background-color: #ff00bf;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
 }
