@@ -214,24 +214,9 @@ section.topo-do-site .flex{
 .topo-do-site p{
     color: #000;
     margin: 40px 0;
-    font-size: 18px;
+    font-size: 24px;
 }
 
-.topo-do-site .img-topo-site img{
-    margin: 0 80px;
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
-
-@keyframes flutuar{
-    0%{
-        top: 0;
-    
-    }
-    100%{
-        top: 30px;
-    }
-}
 
 /* Estilo das especialidades */
 
@@ -261,3 +246,5 @@ section.especialidades .flex{
     font-size: 28px;
     margin: 15px 0;
 }
+
+/* Estilo sobre mim */
