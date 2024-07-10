@@ -248,3 +248,54 @@ section.especialidades .flex{
 }
 
 /* Estilo sobre mim */
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+.sobre .txt-sobre{
+    color: #000;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 42px;
+    margin: 30px 0;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #ff00bf;
+}
+
+.sobre .txt-sobre p{
+    font-size: 26px;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+section.sobre .flex{
+    gap: 60px;
+    align-items: center;
+}
+
+/* Estilo de formulario */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input{
+  width: 100%;
+  background-color: #d3d1d1b9;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+}
