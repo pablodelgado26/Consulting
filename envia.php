@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+include ("includes/config.php");
 include ("vendor/autoload.php");
 
 require 'vendor/autoload.php';
@@ -11,22 +12,19 @@ require 'vendor/autoload.php';
 if (isset($_POST['Enviar'])){
 $mail = new PHPMailer(true);
 
-    try {
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+    try {                     
     $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.gmail.com';                     
+    $mail->Host       = SMTP_HOST;                     
     $mail->SMTPAuth   = true;                                   
-    $mail->Username   = 'md.spconsultoria@gmail.com';                     
-    $mail->Password   = 'Md091104';                               
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-    $mail->Port       = 8080;       
+    $mail->Username   = SMTP_USER;                     
+    $mail->Password   = SMTP_PASS;                                         
+    $mail->Port       = SMTP_PORT;       
 
-    $mail->setFrom('md.spconsultoria@gmail.com', 'Mailer');
+    $mail->setFrom('md.spconsultoria@gmail.com', 'consultoria');
     $mail->addAddress('md.spconsultoria@gmail.com', 'Mônica Delgado');    
-    $mail->addReplyTo('md.spconsultoria@gmail.com', 'Information');
-    $mail->isHTML(true);                                  
-    $mail->Subject = 'mensagem site consultoria';
 
+    $mail->Subject = 'mensagem site consultoria';
+    $mail->isHTML(true);
     $body = "Mensagem enviada através do site, segue informações abaixo: <br><br>
     nome: ". $_POST['nome']."<br>
     email: ". $_POST['email']."<br>
