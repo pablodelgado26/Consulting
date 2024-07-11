@@ -17,7 +17,7 @@ $mail = new PHPMailer(true);
     $mail->Username   = 'md.spconsultoria@gmail.com';                     
     $mail->Password   = 'Md091104';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-    $mail->Port       = 465;       
+    $mail->Port       = 8080;       
 
     $mail->setFrom('md.spconsultoria@gmail.com', 'Mailer');
     $mail->addAddress('md.spconsultoria@gmail.com', 'Mônica Delgado');    
