@@ -4,6 +4,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+include ("vendor/autoload.php");
+
 require 'vendor/autoload.php';
 
 if (isset($_POST['Enviar'])){
