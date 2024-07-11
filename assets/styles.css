@@ -331,3 +331,26 @@ form .btn-enviar input{
   cursor: pointer;
   transition: .2s;
 }
+
+/* Estilo roda pé */
+
+footer{
+  padding: 40px 4%;
+}
+
+footer .line-footer p i{
+  color: #ff00bf;
+  font-size: 22px;
+}
+
+footer .line-footer p a{
+  color: #000;
+}
+
+footer .line-footer{
+  padding: 20px 0;
+}
+
+.borda{
+  border-top: 2px solid #ff00bf;
+}
