@@ -1,21 +1,45 @@
 <?php
 
-    $nome = addslashes($_POST['nome']);
-    $email = addslashes($_POST['email']);
-    $telefone = addslashes($_POST['telefone']);
-    $mensagem = addslashes($_POST['mensagem']);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-    $para = "md.spconsultoria@gmail.com"
-    $assunto = "Coleta de dados site consultorias";
+require 'vendor/autoload.php';
 
-    $corpo = "Nome: ".$nome."\n"."E-mail: ".$email."\n"." Telefone: ".$telefone."\n"."Mensagem: ".$mensagem;
+if (isset($_POST['Enviar'])){
+$mail = new PHPMailer(true);
 
-    $cabeca = "From: teste@formulario.com"."\r\n"."Reply-To: ".$email."\n"."X-Mailer: PHP/".phpversion();
+    try {
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+    $mail->isSMTP();                                            
+    $mail->Host       = 'smtp.gmail.com';                     
+    $mail->SMTPAuth   = true;                                   
+    $mail->Username   = 'md.spconsultoria@gmail.com';                     
+    $mail->Password   = 'Md091104';                               
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+    $mail->Port       = 465;       
 
-    if(mail($para, $assunto, $corpo, $cabeca, $mensagem)){
-        echo("E-mail enviado com sucesso!");
-    }else{
-        echo("O e-mail não pode ser enviado");
+    $mail->setFrom('md.spconsultoria@gmail.com', 'Mailer');
+    $mail->addAddress('md.spconsultoria@gmail.com', 'Joe User');    
+    $mail->addReplyTo('md.spconsultoria@gmail.com', 'Information');
+    $mail->isHTML(true);                                  
+    $mail->Subject = 'mensagem site consultoria';
+
+    $body = "Mensagem enviada através do site, segue informações abaixo: <br><br>
+    nome: ". $_POST['nome']."<br>
+    email: ". $_POST['email']."<br>
+    telefone: ". $_POST['telefone']."<br>
+    mensagem: ". $_POST['mensagem'];
+
+    $mail->Body    = $body;
+
+    $mail->send();
+    echo 'E-mail enviado com sucesso!';
+    } catch (Exception $e) {
+    echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
     }
+}else{
+    echo "Erro ao enviar o e-mail, acesso não foi via formulário: {$mail->ErrorInfo}";
+}
 
 ?>
