@@ -354,3 +354,27 @@ footer .line-footer{
 .borda{
   border-top: 2px solid #ff00bf;
 }
+
+@media screen and (max-width: 1020px){
+  /* cabeçalho */
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+  .txt-topo-site h1{
+    font-size: 30px;
+  }
+
+  section.topo-do-site{
+    padding: 20px 8%;
+  }
+  .logo img{
+    width: 125px;
+  }
+
+  .logo-footer img{
+    width: 125px;
+  }
+  .flex{
+    flex-direction: column;
+  }
+}
