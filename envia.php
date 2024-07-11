@@ -20,7 +20,7 @@ $mail = new PHPMailer(true);
     $mail->Port       = 465;       
 
     $mail->setFrom('md.spconsultoria@gmail.com', 'Mailer');
-    $mail->addAddress('md.spconsultoria@gmail.com', 'Joe User');    
+    $mail->addAddress('md.spconsultoria@gmail.com', 'Mônica Delgado');    
     $mail->addReplyTo('md.spconsultoria@gmail.com', 'Information');
     $mail->isHTML(true);                                  
     $mail->Subject = 'mensagem site consultoria';
